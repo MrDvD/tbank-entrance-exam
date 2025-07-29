@@ -1,3 +1,3 @@
-import { initPdfButton } from "/resources/js/pdf";
+import { initEditableTexts } from "../resources/js/editable";
 
-initPdfButton();
+initEditableTexts();

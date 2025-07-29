@@ -17,6 +17,23 @@ fastify.get('/', function(_, reply) {
   return reply.sendFile('index.html', 'dist/main');
 });
 
+fastify.get('/generate-pdf', async function(_, reply) {
+  const puppeteer = (await import('puppeteer')).default;
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+  await page.goto('http://localhost:3000', {
+    waitUntil: 'networkidle2',
+  });
+  const pdfBuffer = await page.pdf({
+    printBackground: true,
+  });
+  await browser.close();
+
+  reply.header('Content-Type', 'application/pdf');
+  reply.header('Content-Disposition', 'attachment; filename="resume.pdf"');
+  return pdfBuffer;
+});
+
 try {
   await fastify.listen({
     port: 3000,

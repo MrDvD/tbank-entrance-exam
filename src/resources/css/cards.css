@@ -11,17 +11,28 @@
 
   &.image {
     padding: 0;
+    object-fit: cover;
   }
 
   &.square {
     aspect-ratio: 1 / 1;
     width: 124px;
+    min-width: 124px;
   }
 
   &.titled {
     display: flex;
     flex-direction: column;
     gap: 16px;
+
+    h1, h2, h3, h4 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      word-break: break-word; /* Allow wrapping */
+      white-space: normal; /* Allow line breaks */
+      overflow-wrap: break-word; /* Prevent overflow */
+    }
 
     h1 {
       font-size: 14px;
@@ -58,6 +69,7 @@
 
   &.extra {
     justify-content: space-between;
+    gap: 11px;
   }
 }
 
@@ -72,6 +84,7 @@
 
   &.medium {
     padding: 8px;
+    gap: 8px;
   }
 
   &.wide {
@@ -91,7 +104,6 @@
   &.dark {
     background-color: var(--background-dark-1);
     color: var(--text-accent-1);
-    gap: 20px;
   }
 
   &.inner {
