@@ -1,0 +1,54 @@
+@use "sizes.scss" as *;
+@import "../css/colors.css";
+
+.header-root {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+
+  border-bottom: 1px solid #d8dbdf;
+
+  .header-site-logo {
+    display: flex;
+    flex: 0 1 auto;
+
+    img {
+      width: 29px;
+    }
+  }
+
+  .header-left-side {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 32px;
+    width: stretch;
+
+    .header-search {
+      display: flex;
+      flex: 1 1 auto;
+      max-width: 320px;
+    }
+  }
+
+  .header-right-side {
+    display: flex;
+    align-items: center;
+
+    a {
+      display: inherit;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    padding: 0 10px;
+  }
+}
+
+.header-back {
+  height: 64px;
+  background-color: var(--background-neutral-1);
+  grid-row: left-header-side / right-header-side;
+  grid-column: left-header-side / right-header-side;
+}

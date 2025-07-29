@@ -1,0 +1,27 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.mjs",
+  "type": "module",
+  "scripts": {
+    "start": "vite build --emptyOutDir && nodejs server.mjs",
+    "raw-start": "nodejs server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.education.tbank.ru:js-base-summer-2025/Students/labin.makar/Labs/final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/static": "^8.2.0",
+    "fastify": "^5.4.0",
+    "jspdf": "^3.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2",
+    "vite": "^7.0.6"
+  }
+}

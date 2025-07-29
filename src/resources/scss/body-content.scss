@@ -1,0 +1,43 @@
+@use "sizes.scss" as *;
+@import "../css/fonts.css";
+
+#bodyContent {
+  --body-gap: 20px;
+
+  flex: 1 1 auto;
+  margin: 20px auto;
+  max-width: $desktop-width;
+  height: fit-content;
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
+  justify-content: flex-start;
+  gap: var(--body-gap);
+
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 8px;
+
+  & > section {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    flex-wrap: nowrap;
+    gap: var(--body-gap);
+  }
+  .header {
+    grid-row: 1;
+    display: flex;
+    justify-content: right;
+  }
+  .top {
+    grid-row: 2;
+  }
+  .middle {
+    grid-row: 3;
+  }
+  .bottom {
+    grid-row: 4;
+  }
+}

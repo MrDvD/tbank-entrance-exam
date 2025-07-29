@@ -1,0 +1,17 @@
+@import "../scss/body-content.scss";
+@import "../scss/header.scss";
+@import "../scss/window.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+}
