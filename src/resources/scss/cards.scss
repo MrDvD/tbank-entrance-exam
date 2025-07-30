@@ -79,6 +79,10 @@
   &.accent {
     background-color: var(--background-accent-1);
     color: var(--text-accent-1);
+
+    .about-job {
+      color: var(--text-minor-on-accent-1);
+    }
   }
 
   &.dark {

@@ -78,11 +78,17 @@
 
 .job-info {
   min-width: 124px;
+  h2 {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 150%;
+  }
 
   .about-job {
     display: flex;
     flex-direction: row;
     gap: 6px;
+    color: var(--text-superminor-1);
   }
 }
 

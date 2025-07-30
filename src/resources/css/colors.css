@@ -9,7 +9,8 @@
   --text-minor-1: rgb(20, 144, 99);
   --text-minor-on-accent-1: rgb(235, 249, 242);
   --text-subheading-1: rgb(92, 92, 92);
+  --text-superminor-1: rgb(63, 61, 61);
 
   --button-accent-1: rgba(126, 115, 18, 0.4);
-  --button-text-accent-1: rgba(221, 241, 99, 1);
+  --button-text-accent-1: rgb(221, 241, 99);
 }
