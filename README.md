@@ -1,3 +1,36 @@
-# final-project
+# Веб-страница с резюме
 
-<!-- Configure environment variables `POSTGRES_HOST`, `POSTGRES_USER`, `POSTGRES_PASSWORD`, `APP_SECRET` before launching the app. -->
+## Описание
+
+Данный проект представляет собой веб-страницу с резюме, реализованную в соответствии с [техническим заданием](https://github.com/jegius/front-end-entrance-exam).
+## Требования
+
+- Node.js >= 22
+- npm
+
+## Установка
+
+1. Клонируйте репозиторий:
+  ```bash
+  git clone <URL_репозитория>
+  cd <имя_папки_проекта>
+  ```
+
+2. Установите зависимости:
+  ```bash
+  npm install
+  ```
+
+3. Настройте переменные окружения. Перед запуском приложения необходимо указать переменную `APP_SECRET`:
+  ```bash
+  export APP_SECRET=<ваш_секрет>
+  ```
+
+## Запуск
+
+Запустите приложение командой:
+```bash
+npm run start
+```
+
+Откройте [http://localhost:3000/](http://localhost:3000/) в браузере для просмотра веб-страницы.
