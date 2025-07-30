@@ -1,9 +1,9 @@
 export function initEditableTexts() {
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll("h1, h2, h3, h4, p").forEach(element => {
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6, p").forEach(element => {
       element.ondblclick = function() {
         replaceWithInput(element);
-      }
+      };
     });
   });
 }
@@ -55,7 +55,7 @@ function saveTextToCookie(key, value) {
 
 if (typeof document !== 'undefined') {
   document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll("h1, h2, h3, h4, p").forEach(element => {
+    document.querySelectorAll("h1, h2, h3, h4, h5, h6, p").forEach(element => {
       const key = getElementIdentifier(element);
       const match = document.cookie.match(new RegExp('(^| )' + encodeURIComponent(key) + '=([^;]+)'));
       if (match) {

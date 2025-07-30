@@ -1,6 +1,6 @@
 export function initClearCookies() {
   document.addEventListener('DOMContentLoaded', () => {
-    const clearButton = document.querySelector('.header button');
+    const clearButton = document.querySelector('.header a');
     clearButton.onclick = function() {
       clearCookies();
     };

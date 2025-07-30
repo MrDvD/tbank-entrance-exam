@@ -10,53 +10,57 @@
 <body>
 <div id="bodyContent">
   <header class="header">
-    <button class="tag dark" style="cursor: pointer;">Clear local changes</button>
+    <a href="" class="tag dark">Clear local changes</a>
     <a href="/generate-pdf" class="tag dark">Download PDF</a>
   </header>
-  <section class="top">
+  <div class="top">
     <img class="card square image" src="../resources/png/profile.png" alt="Profile">
-    <div class="card square your-info">
+    <article class="card square your-info">
       <h2>Hello 👋🏻 I’m</h2>
-      <section class="your-info">
+      <div class="your-info">
         <h1>Karthik SR</h1>
         <p>UX/UI Designer</p>
-      </section>
-    </div>
-    <div class="card wide titled">
+      </div>
+    </article>
+    <article class="card wide titled">
       <h1>Languages</h1>
-      <section class="horizontal-group short">
-        <span class="vertical-group small short">
+      <div class="horizontal-group short">
+        <div class="vertical-group small short">
           <p class="language-name">English</p>
           <p class="language-name">Malayalam</p>
           <p class="language-name">Hindi</p>
-        </span>
-        <span class="vertical-group small wide">
-          <div class="language-level" style="width: 100%;"></div>
-          <div class="language-level" style="width: 100%;"></div>
-          <div class="language-level" style="width: 80%;"></div>
-        </span>
-      </section>
-    </div>
-  </section>
-  <section class="middle">
-    <div class="card wide titled">
+        </div>
+        <div class="vertical-group small wide">
+          <div class="language-level-keeper">
+            <div class="language-level" style="width: 100%;"></div>
+          </div>
+          <div class="language-level-keeper">
+            <div class="language-level" style="width: 100%;"></div>
+          </div>
+          <div class="language-level-keeper">
+            <div class="language-level" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div class="middle">
+    <article class="card wide titled">
       <h1>Experience</h1>
-      <section class="list">
-        <div class="card medium titled accent">
-          <span class="bar">
+      <div class="list">
+        <article class="card medium titled accent">
+          <header class="bar">
             <h3>Jun. 2023 - Present</h3>
-            <div class="tag accent medium">
-              <p>most recent</p>
-            </div>
-          </span>
-          <span class="horizontal-group">
+            <p class="tag accent medium">most recent</p>
+          </header>
+          <div class="horizontal-group">
             <div class="job-info">
               <h2>Marketing Manager</h2>
-              <span class="about-job">
+              <div class="about-job">
                 <p>Pankayam</p>
                 <p>|</p>
                 <p>Full-time</p>
-              </span>
+              </div>
             </div>
             <ul>
               <li>
@@ -66,11 +70,11 @@
                 <p>SEO Content Creation for Blogs, Website, Social media</p>
               </li>
             </ul>
-          </span>
-        </div>
-        <div class="card medium titled inner">
+          </div>
+        </article>
+        <article class="card medium titled inner">
           <h3>2017 - Present</h3>
-          <span class="horizontal-group">
+          <div class="horizontal-group">
             <div class="job-info">
               <h2>Graphic / Web designer</h2>
               <p>Freelance</p>
@@ -86,18 +90,18 @@
                 <p>Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</p>
               </li>
             </ul>
-          </span>
-        </div>
-        <div class="card medium titled inner">
+          </div>
+        </article>
+        <article class="card medium titled inner">
           <h3>Sep. 2021 - Jun. 2023</h3>
-          <span class="horizontal-group">
+          <div class="horizontal-group">
             <div class="job-info">
               <h2>Legal Assistant</h2>
-              <span class="about-job">
+              <div class="about-job">
                 <p>Law Firm</p>
                 <p>|</p>
                 <p>Intern</p>
-              </span>
+              </div>
             </div>
             <ul>
               <li>
@@ -110,18 +114,16 @@
                 <p>Repare case briefs and summarize depositions, interrogatories and testimony</p>
               </li>
             </ul>
-          </span>
-        </div>
-      </section>
-    </div>
-    <div class="card titled">
-      <h1>Tools</h1>
-      <span class="vertical-group">
-        <div class="card tools">
-          <div class="tag dark small top-center">
-            <p>design</p>
           </div>
-          <section class="tiles">
+        </article>
+      </div>
+    </article>
+    <article class="card titled tools">
+      <h1>Tools</h1>
+      <div class="vertical-group">
+        <article class="card tools-inner">
+          <h5 class="tag dark small top-center">design</h5>
+          <div class="tiles">
             <a href="https://www.figma.com/" target="_blank">
               <img src="../resources/svg/design/figma.svg" alt="Figma">
             </a>
@@ -140,13 +142,11 @@
             <a href="https://meet.google.com/" target="_blank">
               <img src="../resources/svg/design/meet.svg" alt="Google Meet">
             </a>
-          </section>
-        </div>
-        <div class="card tools">
-          <div class="tag dark small top-center">
-            <p>no-code</p>
           </div>
-          <section class="tiles">
+        </article>
+        <article class="card tools-inner">
+          <h5 class="tag dark small top-center">no-code</h5>
+          <div class="tiles">
             <a href="https://zapier.com/" target="_blank">
               <img src="../resources/svg/no-code/zapier.svg" alt="Zapier">
             </a>
@@ -159,13 +159,11 @@
             <a href="https://wordpress.org/" target="_blank">
               <img src="../resources/svg/no-code/wordpress.svg" alt="WordPress">
             </a>
-          </section>
-        </div>
-        <div class="card tools">
-          <div class="tag dark small top-center">
-            <p>artificial intelligence</p>
           </div>
-          <section class="tiles">
+        </article>
+        <article class="card tools-inner">
+          <h5 class="tag dark small top-center">artificial intelligence</h5>
+          <div class="tiles">
             <a href="https://openai.com/index/chatgpt/" target="_blank">
               <img src="../resources/svg/ai/chatgpt.svg" alt="ChatGPT">
             </a>
@@ -175,139 +173,88 @@
             <a href="https://www.midjourney.com/home" target="_blank">
               <img src="../resources/svg/ai/midjourney.svg" alt="Midjourney">
             </a>
-          </section>
-        </div>
-      </span>
-    </div>
-  </section>
-  <section class="bottom">
-    <div class="card titled">
+          </div>
+        </article>
+      </div>
+    </article>
+  </div>
+  <div class="bottom">
+    <article class="card titled education">
       <h1>Education</h1>
       <div class="horizontal-group">
         <div class="vertical-group">
-          <div class="card small titled accent">
-            <span class="bar">
+          <article class="card small titled accent">
+            <header class="bar">
               <h2>2023</h2>
               <img src="../resources/svg/like.svg" alt="Like">
-            </span>
+            </header>
             <section class="education-content">
               <h2>UI/UX</h2>
-              <span class="tag-line small accent">
-                <div class="tag">
-                  <p>#UX</p>
-                </div>
-                <div class="tag">
-                  <p>#UI</p>
-                </div>
-                <div class="tag">
-                  <p>#research</p>
-                </div>
-                <div class="tag">
-                  <p>#DesignSystem</p>
-                </div>
-                <div class="tag">
-                  <p>#Ui</p>
-                </div>
-                <div class="tag">
-                  <p>#wireframing</p>
-                </div>
-                <div class="tag">
-                  <p>#figma</p>
-                </div>
-                <div class="tag">
-                  <p>#Ux</p>
-                </div>
-              </span>
+              <div class="tag-line small accent">
+                <p class="tag">#UX</p>
+                <p class="tag">#UI</p>
+                <p class="tag">#research</p>
+                <p class="tag">#DesignSystem</p>
+                <p class="tag">#Ui</p>
+                <p class="tag">#wireframing</p>
+                <p class="tag">#figma</p>
+                <p class="tag">#Ux</p>
+              </div>
             </section>
             <p>Coursrea</p>
-          </div>
-          <div class="card small titled inner">
+          </article>
+          <article class="card small titled inner">
             <h2>2017</h2>
             <section class="education-content">
               <h2>Graphic design</h2>
-              <span class="tag-line small">
-                <div class="tag">
-                  <p>#branding</p>
-                </div>
-                <div class="tag">
-                  <p>#web</p>
-                </div>
-                <div class="tag">
-                  <p>#illustration</p>
-                </div>
-                <div class="tag">
-                  <p>#adobe</p>
-                </div>
-              </span>
+              <div class="tag-line small">
+                <p class="tag">#branding</p>
+                <p class="tag">#web</p>
+                <p class="tag">#illustration</p>
+                <p class="tag">#adobe</p>
+              </div>
             </section>
             <p>Coursrea</p>
-          </div>
+          </article>
         </div>
-        <div class="card small titled inner">
+        <article class="card small titled inner">
           <h2>2017 - 2022</h2>
           <section class="education-content">
             <h2>Law</h2>
-            <span class="tag-line small">
-              <div class="tag">
-                <p>#law</p>
-              </div>
-              <div class="tag">
-                <p>#legalStudies</p>
-              </div>
-              <div class="tag">
-                <p>#contracts</p>
-              </div>
-              <div class="tag">
-                <p>#internationalLaws</p>
-              </div>
-            </span>
+            <div class="tag-line small">
+              <p class="tag">#law</p>
+              <p class="tag">#legalStudies</p>
+              <p class="tag">#contracts</p>
+              <p class="tag">#internationalLaws</p>
+            </div>
           </section>
           <p>University of Kerala</p>
-        </div>
+        </article>
       </div>
-    </div>
+    </article>
     <div class="vertical-group big">
-      <div class="card wide titled">
+      <article class="card wide titled">
         <h1>Interests</h1>
-        <span class="tag-line">
-          <div class="tag">
-            <p>branding</p>
-          </div>
-          <div class="tag">
-            <p>design</p>
-          </div>
-          <div class="tag">
-            <p>photography</p>
-          </div>
-          <div class="tag">
-            <p>artificial intelligence</p>
-          </div>
-          <div class="tag">
-            <p>illustration</p>
-          </div>
-          <div class="tag">
-            <p>typography</p>
-          </div>
-          <div class="tag">
-            <p>social networks</p>
-          </div>
-          <div class="tag">
-            <p>research</p>
-          </div>
-          <div class="tag">
-            <p>drone pilot</p>
-          </div>
-          <div class="tag">
-            <p>games</p>
-          </div>
-        </span>
-      </div>
-      <div class="card wide titled dark extra">
+        <div class="tag-line">
+          <p class="tag">branding</p>
+          <p class="tag">design</p>
+          <p class="tag">photography</p>
+          <p class="tag">artificial intelligence</p>
+          <p class="tag">illustration</p>
+          <p class="tag">web design</p>
+          <p class="tag">typography</p>
+          <p class="tag">social networks</p>
+          <p class="tag">research</p>
+          <p class="tag">drone pilot</p>
+          <p class="tag">games</p>
+        </div>
+      </article>
+      <article class="card extra wide titled dark">
         <h1>Let´s chat! I´m ready to work on exciting projects</h1>
         <p>srkarthik.designscape@gmail.com</p>
-      </div>
+      </article>
     </div>
-  </section>
+  </div>
 </div>
 </body>
 </html>

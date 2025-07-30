@@ -5,9 +5,9 @@
   --body-gap: 20px;
 
   margin: 20px auto;
+  padding: 0 10px;
   max-width: $desktop-width;
   height: fit-content;
-  overflow: hidden;
   
   display: grid;
   grid-template-columns: 1fr;
@@ -19,7 +19,7 @@
   font-weight: 400;
   font-size: 8px;
 
-  & > section {
+  & > div {
     display: flex;
     flex-direction: row;
     height: fit-content;
@@ -40,6 +40,13 @@
   }
   .bottom {
     grid-row: 4;
+  }
+
+  @media screen and (max-width: $mobile-width) {
+    max-width: 100%;
+    & > div {
+      flex-wrap: wrap;
+    }
   }
 }
 

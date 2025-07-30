@@ -1,4 +1,5 @@
-@import "fonts.css";
+@use "sizes.scss" as *;
+@import "../css/fonts.css";
 
 /* basis */
 .card {
@@ -15,7 +16,6 @@
   }
 
   &.square {
-    aspect-ratio: 1 / 1;
     width: 124px;
     min-width: 124px;
   }
@@ -25,7 +25,7 @@
     flex-direction: column;
     gap: 16px;
 
-    h1, h2, h3, h4, h5, h6 {
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
       overflow: hidden;
       text-overflow: ellipsis;
       min-height: fit-content;
@@ -35,42 +35,21 @@
       overflow-wrap: break-word;
     }
 
-    h1 {
+    & > h1 {
       font-size: 14px;
       font-weight: 500;
     }
 
-    h2 {
+    & > h2 {
       line-height: 150%;
       font-weight: 500;
       font-size: 10px;
     }
 
-    h3 {
+    & > h3 {
       font-size: 8px;
       font-weight: 500;
     }
-  }
-
-  &.tools {
-    position: relative;
-    border-radius: 6px;
-    padding: 16px 16px;
-    background-color: var(--background-inner-1);
-  }
-
-  &.your-info {
-    h2 {
-      font-size: 10px;
-      font-weight: 500;
-    }
-
-    justify-content: space-between;
-  }
-
-  &.extra {
-    justify-content: space-between;
-    gap: 11px;
   }
 }
 
@@ -110,5 +89,61 @@
   &.inner {
     background-color: var(--background-inner-1);
     color: var(--text-neutral-1);
+  }
+}
+
+/* specific */
+.card {
+  &.tools-inner {
+    position: relative;
+    border-radius: 6px;
+    padding: 16px 16px;
+    background-color: var(--background-inner-1);
+  }
+
+  &.your-info {
+    h2 {
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    justify-content: space-between;
+  }
+
+  &.extra {
+    justify-content: space-between;
+    gap: 11px;
+    width: auto;
+  }
+}
+
+/* mobile */
+.card {
+  @media screen and (max-width: $mobile-width) {
+    &.square {
+      flex: 1 1;
+    }
+
+    &.small {
+      width: unset;
+      min-width: 116px;
+    }
+
+    &.image {
+      flex: 0;
+    }
+
+    &.education {
+      width: stretch;
+    }
+    
+    &.tools {
+      width: stretch;
+
+      .vertical-group {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
   }
 }

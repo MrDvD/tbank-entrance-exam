@@ -1,5 +1,5 @@
 @import "../resources/css/base.css";
-@import "../resources/css/cards.css";
+@import "../resources/scss/cards.scss";
 @import "../resources/css/tags.css";
 @import "../resources/css/groups.css";
 @import "../resources/css/inputs.css";
