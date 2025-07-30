@@ -42,13 +42,10 @@
   }
 
   &.top-center {
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -50%);
-    position: absolute;
+    transform: translateY(-50%);
     max-width: 80%;
-
-    white-space: nowrap;
+    z-index: 1;
+    max-width: 64px;
   }
 }
 
@@ -70,7 +67,7 @@
     font-weight: 500;
     line-height: 142%;
 
-    height: 7px;
+    height: 6px;
   }
 
   &.medium {
