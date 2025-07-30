@@ -25,13 +25,14 @@
     flex-direction: column;
     gap: 16px;
 
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5, h6 {
       overflow: hidden;
       text-overflow: ellipsis;
+      min-height: fit-content;
 
-      word-break: break-word; /* Allow wrapping */
-      white-space: normal; /* Allow line breaks */
-      overflow-wrap: break-word; /* Prevent overflow */
+      word-break: break-word;
+      white-space: normal;
+      overflow-wrap: break-word;
     }
 
     h1 {

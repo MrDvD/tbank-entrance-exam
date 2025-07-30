@@ -11,6 +11,7 @@ export function initEditableTexts() {
 function replaceWithInput(element) {
   if (element.querySelector('textarea')) {
     element.querySelector('textarea').focus();
+    element.scrollLeft = 0; 
     return;
   }
 
@@ -25,21 +26,24 @@ function replaceWithInput(element) {
 
   inputField.onblur = function() {
     element.innerHTML = originalText;
-    if (inputField.value.trim() !== "") {
-      element.textContent = inputField.value;
-      saveTextToCookie(getElementIdentifier(element), inputField.value);
-    }
   };
 
   inputField.onkeydown = function(event) {
     if (event.key === 'Enter') {
       inputField.blur();
+      if (inputField.value.trim() !== "") {
+        element.textContent = inputField.value;
+        saveTextToCookie(getElementIdentifier(element), inputField.value);
+        element.scrollLeft = 0;
+      }
     }
   };
 }
 
-function getElementIdentifier(element) {
-  if (element.id) return element.id;
+export function getElementIdentifier(element) {
+  if (element.id) {
+    return element.id;
+  }
   const tag = element.tagName;
   const index = Array.from(document.querySelectorAll(tag)).indexOf(element);
   return `${tag}_${index}`;
@@ -49,12 +53,14 @@ function saveTextToCookie(key, value) {
   document.cookie = `${encodeURIComponent(key)}=${encodeURIComponent(value)}; path=/`;
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll("h1, h2, h3, h4, p").forEach(element => {
-    const key = getElementIdentifier(element);
-    const match = document.cookie.match(new RegExp('(^| )' + encodeURIComponent(key) + '=([^;]+)'));
-    if (match) {
-      element.textContent = decodeURIComponent(match[2]);
-    }
+if (typeof document !== 'undefined') {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll("h1, h2, h3, h4, p").forEach(element => {
+      const key = getElementIdentifier(element);
+      const match = document.cookie.match(new RegExp('(^| )' + encodeURIComponent(key) + '=([^;]+)'));
+      if (match) {
+        element.textContent = decodeURIComponent(match[2]);
+      }
+    });
   });
-});
+}

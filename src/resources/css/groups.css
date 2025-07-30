@@ -10,22 +10,33 @@
 }
 
 .language-name {
-  width: fit-content;
+  display: block;
+  height: 11px;
+  max-width: 100px;
   font-size: 10px;
   font-weight: 500;
   line-height: 104%;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  .inheritable-input {
+    field-sizing: fixed;
+    height: 100%;
+  }
 }
 
 .language-level {
   background-color: var(--background-accent-1);
   border-radius: 3px;
   flex: 1 1 auto;
+  max-height: 11px;
 }
 
 .vertical-group {
   display: flex;
   flex-direction: column;
-  flex: 1 1;
   gap: 12px;
 
   &.small {
@@ -34,6 +45,10 @@
 
   &.short {
     flex: 0;
+  }
+
+  &.wide {
+    flex: 1 1;
   }
 
   &.big {

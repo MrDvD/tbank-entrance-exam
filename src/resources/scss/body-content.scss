@@ -29,7 +29,8 @@
   .header {
     grid-row: 1;
     display: flex;
-    justify-content: right;
+    justify-content: left;
+    gap: 8px;
   }
   .top {
     grid-row: 2;
