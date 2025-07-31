@@ -1,0 +1,42 @@
+.inheritable-input {
+  border: transparent;
+  background-color: transparent;
+  color: inherit;
+  outline: none;
+  width: inherit;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+
+  resize: none;
+  field-sizing: content;
+  overflow: hidden;
+
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: flex;
+  outline: 1px solid transparent;
+
+  transition: outline 0.2s linear;
+}
+
+p:has(.inheritable-input),
+h1:has(.inheritable-input),
+h2:has(.inheritable-input),
+h3:has(.inheritable-input),
+h4:has(.inheritable-input),
+h5:has(.inheritable-input),
+h6:has(.inheritable-input) {
+  outline: 1px solid var(--text-subheading-1);
+}

@@ -1,0 +1,182 @@
+@use "sizes.scss" as *;
+@import "../css/fonts.css";
+
+/* basis */
+.card {
+  background-color: var(--background-neutral-1);
+  color: var(--text-neutral-1);
+  border-radius: 12px;
+  padding: 12px;
+  box-sizing: border-box;
+  text-wrap: wrap;
+
+  &.image {
+    background-image: url("/resources/webp/profile.webp");
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    aspect-ratio: 1 / 1;
+    width: 124px;
+  }
+
+  &.square {
+    width: 124px;
+    min-width: 124px;
+  }
+
+  &.titled {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & > h1, & > h2, & > h3, & > h4, & > h5, & > h6 {
+      width: fit-content;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: fit-content;
+
+      word-break: break-word;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+
+    h1 {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    h2 {
+      line-height: 150%;
+      font-weight: 500;
+      font-size: 10px;
+    }
+
+    h3 {
+      font-size: 8px;
+      font-weight: 500;
+    }
+  }
+}
+
+/* sizes */
+.card {
+  &.small {
+    min-width: 116px;
+    width: 116px;
+    height: fit-content;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  &.medium {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  &.wide {
+    flex: 1 1 auto;
+    width: fit-content;
+    height: stretch;
+  }
+}
+
+/* colors */
+.card {
+  &.accent {
+    background-color: var(--background-accent-1);
+    color: var(--text-accent-1);
+
+    .about-job {
+      color: var(--text-minor-on-accent-1);
+    }
+  }
+
+  &.dark {
+    background-color: var(--background-dark-1);
+    color: var(--text-accent-1);
+  }
+
+  &.inner {
+    background-color: var(--background-inner-1);
+    color: var(--text-neutral-1);
+  }
+}
+
+/* specific */
+.card {
+  &.tools-inner {
+    border-radius: 6px;
+    padding: 16px 16px;
+    background-color: var(--background-inner-1);
+
+    width: min-content;
+    display: grid;
+    grid-template-columns: 20px 20px;
+    grid-auto-rows: minmax(0, 1fr);
+    gap: 16px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      user-select: none;
+    }
+  }
+
+  &.your-info {
+    h2 {
+      font-size: 10px;
+      font-weight: 500;
+      width: fit-content;
+    }
+
+    justify-content: space-between;
+  }
+
+  &.extra {
+    justify-content: space-between;
+    gap: 11px;
+    width: auto;
+
+    p {
+      width: fit-content;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      min-height: fit-content;
+      word-break: break-word;
+      white-space: normal;
+      overflow-wrap: break-word;
+    }
+  }
+
+  &.education {
+    min-width: fit-content;
+  }
+}
+
+/* mobile */
+.card {
+  @media screen and (max-width: $mobile-width) {
+    &.square {
+      flex: 1 1;
+    }
+
+    &.small {
+      width: unset;
+      min-width: 116px;
+    }
+
+    &.education {
+      width: stretch;
+    }
+    
+    &.tools {
+      width: stretch;
+
+      .vertical-group {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
+    }
+  }
+}

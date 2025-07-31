@@ -1,6 +1,3 @@
-src/resources/png/
-src/resources/fonts/
-src/resources/svg/
 node_modules/
 dist/
 tmp/

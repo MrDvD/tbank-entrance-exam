@@ -1,0 +1,22 @@
+.ripple {
+  background-color: white;
+  width: 1px;
+  height: 1px;
+  border-radius: 100%;
+  opacity: 0.2;
+  position: absolute;
+  transition: all 1s ease-out;
+  pointer-events: none;
+  mix-blend-mode: difference;
+
+  &.run {
+    transform: scale(300);
+    opacity: 0;
+  }
+}
+
+.card,
+.button {
+  position: relative;
+  overflow: clip;
+}
