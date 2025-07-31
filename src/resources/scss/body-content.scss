@@ -15,7 +15,7 @@
   justify-content: flex-start;
   gap: var(--body-gap);
 
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 8px;
 
@@ -44,7 +44,7 @@
 
   @media screen and (max-width: $mobile-width) {
     max-width: 100%;
-    margin: 0 auto;;
+    margin-bottom: 10px;
     & > div {
       flex-wrap: wrap;
     }

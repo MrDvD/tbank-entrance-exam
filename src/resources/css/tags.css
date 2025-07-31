@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   line-height: 150%;
 
+  pointer-events: none;
+  & > * {
+    pointer-events: auto;
+  }
+
   &.small {
     gap: 0 2px;
 
@@ -27,7 +32,7 @@
 
 .tag {
   max-width: 100%;
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 
   display: block;
   overflow: hidden;

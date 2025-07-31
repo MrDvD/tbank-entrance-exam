@@ -11,7 +11,7 @@
   text-wrap: wrap;
 
   &.image {
-    background-image: url("/resources/png/profile.png");
+    background-image: url("/resources/webp/profile.webp");
     background-position: center;
     background-size: cover;
     padding: 0;
@@ -41,18 +41,18 @@
       overflow-wrap: break-word;
     }
 
-    & > h1 {
+    h1 {
       font-size: 14px;
       font-weight: 500;
     }
 
-    & > h2 {
+    h2 {
       line-height: 150%;
       font-weight: 500;
       font-size: 10px;
     }
 
-    & > h3 {
+    h3 {
       font-size: 8px;
       font-weight: 500;
     }
@@ -106,6 +106,7 @@
 /* specific */
 .card {
   &.tools-inner {
+    // height: stretch;
     border-radius: 6px;
     padding: 16px 16px;
     background-color: var(--background-inner-1);
@@ -119,6 +120,10 @@
     a {
       display: flex;
       justify-content: center;
+
+      // img {
+      //   object-fit: none;
+      // }
     }
   }
 

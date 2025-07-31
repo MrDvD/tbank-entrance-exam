@@ -72,6 +72,7 @@ fastify.get('/generate-pdf', async function(request, reply) {
 
   const pdfBuffer = await page.pdf({
     printBackground: true,
+    format: 'A4',
   });
   await browser.close();
 

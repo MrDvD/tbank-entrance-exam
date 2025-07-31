@@ -1,9 +1,0 @@
-@use "sizes.scss" as *;
-
-.window-root {
-  grid-area: window;
-  max-width: $desktop-width;
-
-  display: flex;
-  flex-direction: column;
-}
