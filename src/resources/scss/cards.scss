@@ -106,7 +106,6 @@
 /* specific */
 .card {
   &.tools-inner {
-    // height: stretch;
     border-radius: 6px;
     padding: 16px 16px;
     background-color: var(--background-inner-1);
@@ -120,10 +119,7 @@
     a {
       display: flex;
       justify-content: center;
-
-      // img {
-      //   object-fit: none;
-      // }
+      user-select: none;
     }
   }
 

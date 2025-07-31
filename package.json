@@ -5,8 +5,7 @@
   "main": "server.mjs",
   "type": "module",
   "scripts": {
-    "start": "vite build --emptyOutDir && nodejs server.mjs",
-    "raw-start": "nodejs server.mjs"
+    "start": "eslint . --fix && vite build --emptyOutDir && nodejs server.mjs"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,11 @@
     "puppeteer": "^24.15.0"
   },
   "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.3",
+    "prettier": "^3.6.2",
     "sass": "^1.89.2",
     "vite": "^7.0.6"
   }

@@ -18,11 +18,17 @@
   line-height: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   display: flex;
   outline: 1px solid transparent;
 
-  transition: outline .2s linear;
+  transition: outline 0.2s linear;
 }
 
 p:has(.inheritable-input),

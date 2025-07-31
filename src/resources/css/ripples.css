@@ -3,7 +3,7 @@
   width: 1px;
   height: 1px;
   border-radius: 100%;
-  opacity: .2;
+  opacity: 0.2;
   position: absolute;
   transition: all 1s ease-out;
   pointer-events: none;
@@ -15,7 +15,8 @@
   }
 }
 
-.card, .button {
+.card,
+.button {
   position: relative;
-  overflow: clip;  
+  overflow: clip;
 }

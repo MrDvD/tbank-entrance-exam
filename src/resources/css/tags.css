@@ -88,20 +88,20 @@
 
 /* colors */
 .tag {
-    width: fit-content;
-    padding: 4px 10px;
-    background-color: var(--background-inner-1);
-    border-radius: 40px;
-    border-color: transparent;
-    text-decoration: none;
+  width: fit-content;
+  padding: 4px 10px;
+  background-color: var(--background-inner-1);
+  border-radius: 40px;
+  border-color: transparent;
+  text-decoration: none;
 
-    &.accent {
-      background-color: var(--button-accent-1);
-      color: var(--button-text-accent-1);
-    }
-
-    &.dark {
-      background-color: var(--background-dark-1);
-      color: var(--text-accent-1);
-    }
+  &.accent {
+    background-color: var(--button-accent-1);
+    color: var(--button-text-accent-1);
   }
+
+  &.dark {
+    background-color: var(--background-dark-1);
+    color: var(--text-accent-1);
+  }
+}

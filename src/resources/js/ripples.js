@@ -1,16 +1,16 @@
 const rippleElementSelectors = [".card", ".button"];
 
 export function initRipples() {
-  document.addEventListener('DOMContentLoaded', () => {
-    rippleElementSelectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach(elem => {
-        elem.addEventListener('pointerdown', function(event) {
+  document.addEventListener("DOMContentLoaded", () => {
+    rippleElementSelectors.forEach((selector) => {
+      document.querySelectorAll(selector).forEach((elem) => {
+        elem.addEventListener("pointerdown", function (event) {
           if (event.target !== elem) {
             return;
           }
 
-          const ripple = document.createElement('div');
-          ripple.className = 'ripple';
+          const ripple = document.createElement("div");
+          ripple.className = "ripple";
 
           const x = event.offsetX;
           const y = event.offsetY;
@@ -20,10 +20,10 @@ export function initRipples() {
           elem.appendChild(ripple);
 
           requestAnimationFrame(() => {
-            ripple.classList.add('run');
+            ripple.classList.add("run");
           });
 
-          ripple.addEventListener('transitionend', () => {
+          ripple.addEventListener("transitionend", () => {
             ripple.remove();
           });
         });
